@@ -11,19 +11,6 @@ async function fetchParties() {
     render()
 }
 
-async function fetchGuests() {
-    const response = await fetch("https://fsa-crud-2aa9294fe819.herokuapp.com/api/2310/guests")
-    const data = await response.json()
-    guests = data.data
-    console.log(guests)
-}
-
-async function fetchRSVP() {
-    const response = await fetch("https://fsa-crud-2aa9294fe819.herokuapp.com/api/2310/rsvps")
-    const data = await response.json()
-    rsvp = data.data
-    console.log(rsvp)
-}
 
 function render() {
     const html = parties.map((party, index) => {
@@ -39,5 +26,3 @@ function render() {
 }
 
 fetchParties()
-fetchGuests()
-fetchRSVP()
